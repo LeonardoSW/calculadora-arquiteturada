@@ -1,0 +1,10 @@
+package calculadora.services;
+
+public class OperationHandlers {
+
+	String method;
+	
+	public void OperationHandler(String strCalc) {
+		
+	}
+}

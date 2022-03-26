@@ -1,0 +1,54 @@
+package calculadora.services;
+
+
+import calculadora.Models.*;
+
+public class OperationHandlers {
+
+	Methods method;
+	double firstNumber;
+	double secondNumber;
+	
+	public void OperationHandler(String strCalc) {
+		
+		if(strCalc.contains("+")) {	
+			method = Methods.SOMA;
+			String numberList[] = strCalc.split("+");
+			firstNumber = Double.parseDouble(numberList[0]);
+			secondNumber = Double.parseDouble(numberList[1]);
+		}
+		
+		if(strCalc.contains("-")) {	method = Methods.SUBTRACAO;	}
+
+		if(strCalc.contains("/")) {	method = Methods.DIVISAO; }
+		
+		if(strCalc.contains("*")) {	method = Methods.MULTIPLICACAO;	}
+		
+		
+	
+	}
+	
+	public double Calculate () {
+		
+		switch (this.method) {
+			case SOMA:
+				
+				break;
+			
+			case SUBTRACAO:
+				
+				break;
+				
+			case DIVISAO:
+				
+				break;
+				
+			case MULTIPLICACAO:
+				
+				break;
+		}
+		
+		return 0;
+	}
+	
+}

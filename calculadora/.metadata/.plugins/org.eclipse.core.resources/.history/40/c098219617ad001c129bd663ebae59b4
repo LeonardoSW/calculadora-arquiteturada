@@ -1,0 +1,20 @@
+package calculadora.Models;
+
+public enum Methods {
+
+	SOMA("soma"),
+	SUBTRACAO("subtracao"),
+	DIVISAO("divisao"),
+	MULTIPLICACAO("multiplicacao");
+	
+	private String description;
+	
+	Methods(String description){
+		this.description = description;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+}

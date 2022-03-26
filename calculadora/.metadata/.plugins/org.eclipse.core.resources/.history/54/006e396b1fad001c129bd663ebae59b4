@@ -1,0 +1,10 @@
+package calculadora.services;
+import calculadora.Models.*;
+
+public class CalculateHandle {
+	
+	public double CalculateSoma(double firstNumber, double secoundNumber) {
+		return 0;
+	}
+	
+}

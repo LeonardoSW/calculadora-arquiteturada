@@ -1,0 +1,21 @@
+package calculadora.services;
+
+import calculadora.Models.*;
+
+public class OperationHandlers {
+
+	Methods method;
+	
+	public void OperationHandler(String strCalc) {
+		
+		if(strCalc.contains("+")) {
+			method = Methods.SOMA;
+		}
+		
+		strCalc.contains("-");
+		strCalc.contains("/");
+		strCalc.contains("*");
+		
+		
+	}
+}
