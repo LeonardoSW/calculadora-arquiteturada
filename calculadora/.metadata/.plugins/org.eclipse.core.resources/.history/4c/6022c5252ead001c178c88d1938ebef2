@@ -1,0 +1,23 @@
+package calculadora.services;
+
+import calculadora.Models.*;
+
+public class CalculateHandle {
+	
+	private double CalculateSUM(double firstNumber, double secoundNumber) {
+		return firstNumber + secoundNumber;
+	}
+	
+	public double CalculateSUBTRACTION(double firstNumber, double secoundNumber) {
+		return firstNumber - secoundNumber;
+	}
+	
+	public double CalculateDIVISION(double firstNumber, double secoundNumber) {
+		return firstNumber / secoundNumber;
+	}
+	
+	public double CalculateMULTIPLICATION(double firstNumber, double secoundNumber) {
+		return firstNumber * secoundNumber;
+	}
+	
+}

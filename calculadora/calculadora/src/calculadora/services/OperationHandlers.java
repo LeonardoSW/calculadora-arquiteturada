@@ -2,18 +2,19 @@ package calculadora.services;
 
 import calculadora.Models.*;
 
+//This class is responsible for operation handler of calc set by user.
 public class OperationHandlers {
 
-	Methods method;
-	double firstNumber;
-	double secondNumber;
-	CalculateHandle doCalc = new CalculateHandle();
+	private Methods method;
+	private double firstNumber;
+	private double secondNumber;
+	private CalculateHandle doCalc = new CalculateHandle();
 	
-	public void OperationHandler(String strCalc) {
+	public OperationHandlers(String strCalc) {
 		
 		if(strCalc.contains("+")) {	
 			method = Methods.SUM;
-			setNumbers(strCalc, "+");
+			setNumbers(strCalc, "\\+");
 		}
 		
 		if(strCalc.contains("-")) {	
@@ -29,22 +30,22 @@ public class OperationHandlers {
 		
 		if(strCalc.contains("*")) {	
 			method = Methods.MULTIPLICATION;	
-			setNumbers(strCalc, "*");
+			setNumbers(strCalc, "\\*");
 		}
 		
 	}
 	
 	private void setNumbers(String bruteStr, String method) {
-		String numberList[] = bruteStr.split(method);
+		String [] numberList = bruteStr.split(method);
 		firstNumber = Double.parseDouble(numberList[0]);
 		secondNumber = Double.parseDouble(numberList[1]);
 	}
 	
-	public double Calculate () {
+	public double Calculate () { //This method run the calculator object by operation method 
 		
 		switch (this.method) {
 		case SUM:
-				return doCalc.CalculateSUM(firstNumber, secondNumber);
+			return doCalc.CalculateSUM(firstNumber, secondNumber);
 				
 		case SUBTRACTION:
 			return doCalc.CalculateSUBTRACTION(firstNumber, secondNumber);
@@ -53,7 +54,7 @@ public class OperationHandlers {
 			return doCalc.CalculateDIVISION(firstNumber, secondNumber);
 				
 		case MULTIPLICATION:
-				return doCalc.CalculateMULTIPLICATION(firstNumber, secondNumber);
+			return doCalc.CalculateMULTIPLICATION(firstNumber, secondNumber);
 		}
 		
 		return 0;

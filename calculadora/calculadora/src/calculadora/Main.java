@@ -1,23 +1,45 @@
 package calculadora;
 
+import java.util.Scanner;
+import calculadora.services.*;
+
 public class Main {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
+
+		OperationHandlers operations;
+		Scanner input = new Scanner(System.in);
+		boolean on = true;
+		String strCalc;
 		
 		System.out.println("Calculadora Java");
 		
-		System.out.println("Entre com o primeiro numero");
+		System.out.println("Obs: Todas as operações são realizadas no formato in-line,\n"
+				+ "sendo escrito o calculo matemático em uma linha com seus respectivos simbolos matemáticos,\n"
+				+ "por exemplo:\n"
+				+ "Exemplo Soma: 11+7,\n"
+				+ "Exemplo Divisao 15/3,\n"
+				+ "Exemplo Subtração 8-3\n"
+				+ "Exemplo Multiplicação 2*3\n"
+				+ "\n"
+				+ "Para encerrar a aplicação pressione Enter sem inserir valores.");
 	
-		System.out.println("Informe a operação desejada:");	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		while(on) {
+			System.out.println("\nRealize aqui o seu calculo:");	
+			strCalc = input.nextLine();
+			if(strCalc.isEmpty())
+					on = false;
+			else
+			{
+				operations = new OperationHandlers(strCalc);
+				double response = operations.Calculate();
+				System.out.println(response);
+			}
+		}
+		
+		System.out.println("\nProgram finished...");
+		
 	}
 
 }

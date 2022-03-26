@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="calculadora.Models.Methods"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="calculadora.services.CalculateHandle"/>
+    <fullyQualifiedTypeName name="calculadora.services.OperationHandlers"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="calculadora.Models.Methods"/>
 </qualifiedTypeNameHistroy>
