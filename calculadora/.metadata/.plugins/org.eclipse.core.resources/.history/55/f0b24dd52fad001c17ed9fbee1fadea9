@@ -1,6 +1,6 @@
 package calculadora.services;
 
-public class CalculateHandle implements ICalculateHandle {
+public class CalculateHandle {
 	
 	public double CalculateSUM(double firstNumber, double secoundNumber) {
 		return firstNumber + secoundNumber;

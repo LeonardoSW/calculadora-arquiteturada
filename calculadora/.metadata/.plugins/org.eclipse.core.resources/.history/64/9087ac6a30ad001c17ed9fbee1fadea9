@@ -3,7 +3,7 @@ package calculadora.services;
 import calculadora.Models.*;
 
 //This class is responsible for operation handler of calc set by user.
-public class OperationHandlers implements IOperationHandlers {
+public class OperationHandlers {
 
 	private Methods method;
 	private double firstNumber;

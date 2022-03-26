@@ -1,0 +1,5 @@
+package calculadora.services;
+
+public interface ICalculateHandle {
+
+}
